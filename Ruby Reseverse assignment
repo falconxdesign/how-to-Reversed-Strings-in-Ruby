@@ -1,0 +1,82 @@
+Complete the solution so that it reverses the string value passed into it. 
+
+Solutions
+
+
+def solution(str)
+  str.reverse
+end
+
+
+def solution(str)
+  str_array = str.split("")
+  i = 0
+  j = str.length - 1
+  (str.length/2).floor.times do
+    str_array[i], str_array[j] = str_array[j], str_array[i]
+    i += 1
+    j -= 1
+  end
+  str_array.join("")
+end
+
+
+def solution(str)
+  str.split('').inject('') { |s, b| b + s }
+end
+
+
+def solution(str=nil)
+   str.reverse if !str.nil?
+end
+
+
+def solution(str)
+  if str.length > 0
+    str.split('').reduce { |current, newChar| newChar+current }
+  else
+    return ''
+  end
+end
+
+
+def solution str=nil
+  str.reverse if str and str.is_a? String
+end
+
+
+def solution(str)
+  str.reverse if str.instance_of? String
+end
+
+
+
+def solution(str)
+final = ""
+str.split("").each {|x| final = x+final}
+return final
+end
+
+
+
+def solution(str)
+  result = ''
+  length = str.size - 1
+  while length >= 0
+    result << str[length]
+    length -=1
+  end
+  result
+end
+
+
+
+def solution(str)
+    i = str.length - 1
+  char = "".to_s
+  while i >= 0 do
+    char += str[i]
+    i -= 1
+  end
+  char
+end
